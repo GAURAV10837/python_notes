@@ -1,0 +1,247 @@
+---------------------------Operators----------------------
+Arithmetic Operators
+Relational Operators 
+Logical Operators
+Bitwise Operators
+Assignment Operators
+Membership Operators
+
+ -----------------Arithmetic Operators-----(basic math operations)
+5+2 output 7  Addition
+5-2 output 3  Subtraction
+5*2 output 10 Multiplication
+5/2 output is 2.5   Division
+5//2 output is 2 (integer division )
+5%2 help to provide (remainder ) 
+5**2 means (power 5^2)
+ 
+------------------Relational Operators  (jbb compare hota hai konn? jada bada ya chota hai)
+
+4>5     Greater than
+4<5   	Less than
+4>=5   	Greater than or equal to
+4<=5    Less than or equal to
+4==4 equal (True)
+4!=4  not equal (False)  ulta hojaye ga agar equal ha to false nhi to true
+
+--------------------Logical Operators---(important in logic building)
+AND___________________________________
+	1 AND 1   -> 1    True
+
+	0 AND 0   -> 0     
+        1 AND 0	  -> 0     False
+	0 AND 1   -> 0
+
+
+
+OR __________________________________
+         1 OR 1   ->1
+         1 OR 0   ->1      True
+         0 OR 1   ->1
+
+         0 OR 0   ->0      False
+
+
+NOT___________________________________(opposite hojyega)
+
+ NOT 1 -> False
+ NOT 0 -> True
+
+
+
+----------------Bitwise Operator---------------------
+
+
+| Operator    | Symbol | Description                               | Example (`a = 4`, `b = 5`) |     |       |         |
+| ----------- | ------ | ----------------------------------------- | -------------------------- | --- | ----- | ------- |
+| AND         | &      | 1 if **both** bits are 1                  | `a & b` → `4 & 5` = `4`    |     |       |         |
+| OR          | |      | donomaon se 1 bhi hotato 1,0 OR 0   False | 1 if **either** bit is 1   |     |       |         |
+| XOR         | ^      | 1 if **only one** bit is 1 (not both)     | `a ^ b` → `4 ^ 5` = `1`    |     |       |         |
+| NOT         | ~      | Inverts all bits (bitwise NOT)            | `~a` → `~4` = `-5`         |     |       |         |
+| Left Shift  | <<     | Shifts bits **left** (adds 0s at end)     | `a << 1` → `4 << 1` = `8`  |     |       |         |
+| Right Shift | >>     | Shifts bits **right** (drops bits at end) | `b >> 1` → `5 >> 1` = `2`  |     |       |         |
+
+
+------------------------------ Bitwise AND-------------------------------------------------------------
+let AND          example                                         8421
+2  ko              010                                            010 -> 2
+3  ko              011                                            011 -> 3
+                ________
+             0 AND 0  ,1 AND 1 ,0 AND 1
+print(2 & 3)   0          1        0                              010 -> 2
+output is 2
+__________________________________________________________________________________________________________
+
+
+
+----------------------------Bitwise OR--------------------------------------------------------------------
+let  OR          example                                         8421
+2  ko              010                                            010 -> 2
+3  ko              011                                            011 -> 3
+                ________
+             0 OR 0  ,1 OR 1 , 0 OR 1
+               0          1        1                              011 -> 3
+print(2 | 3)
+output is 3
+
+---------------------Bitwise XOR ^ ----------------------------------------------------------
+
+-- same--
+0  0    
+1  1   False
+
+
+--opposite ---
+0  1   
+1  0   True
+
+
+let  XOR          example                                         8421
+2  ko              010                                             010 -> 2
+3  ko              011                                             011 -> 3
+                ________
+             0 XOR 0  ,1 XOR 1 ,0 XOR 1
+               0         0        1                               001 -> 1
+print(2 ^ 3)
+output is 1
+___________________________________________________________________________________________________
+
+----------Bitwise NOT  ~ --------------------------------------------------------------------------
+
+0   True
+1   False           invert kr dena 
+___________________________________________________________________________________________________
+
+
+------------------------------------Bitwise left << -------------------------------------------------
+
+The left shift operator << shifts the bits to the left, adding zeros on the right.
+
+print(3 << 1)  # Shift left by 1
+
+00000011 << 1  →  00000110
+                 ↑↑ bits move left also add 0 on the right
+
+8421
+0110
+_____
+4+2 = 6
+
+print(3 << 1)
+output is 6
+____________________________________________________________________________________________________
+
+
+---------------Bitwise Right >> -------------------------------------------------------------------
+
+
+The right shift (>>) operator shifts the bits to the right, and drops bits on the right, adding zeros on the left
+
+
+
+
+8 = 00001000
+
+00001000  >> 00000100   ← right shift by 1
+
+
+    8421              8421
+   01000     >>      00100
+__________           ______
+    8                  4 
+
+
+         8 >> 1 = 4
+_________________________________________________________________________________________________________
+
+
+------------------------ Assignment Operators-------------------------------
+a variable
+2 is integer
+a = 2
+aap ek variable a ko ek value assign kr rhe ho
+
+
+#a = a + 2
+  a += 2
+
+              Basic Assignment:
+| Operator | Description  | Example |
+| -------- | ------------ | ------- |
+|    =     | Assign value |  x = 5  |
+
+             Compound Assignment (Shorthand):
+
+| Operator | Meaning                 | Example   | Same as      |
+| -------- | ----------------------- | --------- | ------------ |
+|   +=     | Add and assign          |  x += 3   |  x = x + 3   |
+|   -=     | Subtract and assign     |  x -= 2   |  x = x - 2   |
+|   *=     | Multiply and assign     |  x *= 4   |  x = x * 4   |
+|   /=     | Divide and assign       |  x /= 2   |  x = x / 2   |
+|   //=    | Floor divide and assign |  x //= 2  |  x = x // 2  |  
+|   %=     | Modulus and assign      |  x %= 3   |  x = x % 3   |
+|   **=    | Exponent and assign     |  x **= 2  |  x = x ** 2  |
+
+                    Bitwise Assignment Operators:
+| Operator | Meaning                        | Example               | Same as      |               
+| -------- | ------------------------------ | --------------------- | ------------ |     
+|  &=      | Bitwise AND and assign         |  x &= 3               |  x = x & 3   |          
+|  |=      | Bitwise OR and assign          |  x |= 1               |  x = x | 1   |
+|  ^=      | Bitwise XOR and assign         |  x ^= 1               |  x = x ^ 1   |              
+|  <<=     | Bitwise left shift and assign  |  x <<= 2              |  x = x << 2  |                
+|  >>=     | Bitwise right shift and assign |  x >>= 1              |  x = x >> 1  | 
+
+python main a++ ++a use nhi hota
+correct way written in python 
+Use a += 1 to increase value by 1
+Use a -= 1 to decrease value by 1
+ 
+| C/C++ | Python Equivalent |
+| ----- | ----------------- |
+|  a++  |     a += 1        |
+|  a--  |     a -= 1        |
+|  ++a  |     a += 1        |
+|  --a  |     a -= 1        |
+
+---------------------------Membership Operators-----------------
+
+| Operator | Meaning                                                        | Example            | Result |
+| -------- | -------------------------------------------------------------- | ------------------ | ------ |
+|   in     | Returns `True` if the value is **present** in the sequence     |  'a' in 'cat'      |  True  |
+|  not in  | Returns `True` if the value is **not present** in the sequence |  5 not in [1,2,3]  |  True  |
+
+Membership Operators btata hai ke kise given chizze main ke dusri chezze hai ya nhi
+
+for example 
+            print('D' in 'Delhi')
+
+       output   True
+
+
+             print(1 in [2,3,4,5,6])
+
+       output   False
+
+            
+            print('D' not in 'Delhi')
+
+      output    False
+#it works in Lists, Tuple , sets , Disctionary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
